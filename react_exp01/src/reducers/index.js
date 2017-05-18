@@ -4,6 +4,12 @@
 import { combineReducers } from 'redux';
 import { nav } from './nav';
 
+
+//reducer
+const initialState = {
+    text: 'Hello'
+}
+
 const testReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'CHANGE_TEXT':
