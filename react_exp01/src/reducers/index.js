@@ -23,14 +23,14 @@ const testReducer = (state = initialState, action) => {
     }
 }
 
-export default testReducer;
+//export default testReducer;
 
-//const rootReducer = combineReducers({
-//    //routing: routerReducer,
-//    /* your reducers */
-//    testReducer, //导航相关
-//    //search, //搜索相关
-//    //books, //书籍相关
-//});
-//
-//export default rootReducer;
+const rootReducer = combineReducers({
+    //routing: routerReducer,
+    /* your reducers */
+    testReducer, //导航相关
+    //search, //搜索相关
+    //books, //书籍相关
+});
+
+export default rootReducer;
