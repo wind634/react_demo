@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import CommentBox from './components/CommentBox'
 
+import {Navbar} from "react-bootstrap"
+
 class App extends Component {
   render() {
     //return (
@@ -17,11 +19,22 @@ class App extends Component {
       //  </div>
       //);
 
+      //return (
+      //    <div className="App">
+      //        <CommentBox />
+      //    </div>
+      //);
+
       return (
-          <div className="App">
-                <CommentBox />
-          </div>
+          <Navbar>
+              <Navbar.Header>
+                  <Navbar.Brand>
+                      <a href="#">react-bootstrap</a>
+                  </Navbar.Brand>
+              </Navbar.Header>
+          </Navbar>
       );
+
   }
 }
 
