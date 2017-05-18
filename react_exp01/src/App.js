@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CommentBox from './components/CommentBox'
 
-import {Navbar} from "react-bootstrap"
+import {Navbar, Button} from "react-bootstrap"
 
 class App extends Component {
   render() {
@@ -32,6 +32,7 @@ class App extends Component {
                       <a href="#">react-bootstrap</a>
                   </Navbar.Brand>
               </Navbar.Header>
+              <Button >按钮</Button>
           </Navbar>
       );
 
