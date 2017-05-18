@@ -8,8 +8,8 @@ import './CommentList.css';
 class CommentList extends Component {
     render() {
         return (
-            <div className="commentForm">
-                Hello, world! I am a CommentForm.
+            <div className="commentList">
+                Hello, world! I am a CommentList.
             </div>
         );
     }
