@@ -4,12 +4,20 @@
 
 import React, { Component } from 'react';
 import './CommentList.css';
+import Comment from "./Comment"
 
 class CommentList extends Component {
     render() {
+        var commentNodes = this.props.data.map(function(comment) {
+            return (
+                <Comment author={comment.author} key={comment.id}>
+                    {comment.text}
+                </Comment>
+            );
+        });
         return (
             <div className="commentList">
-                Hello, world! I am a CommentList.
+                {commentNodes}
             </div>
         );
     }
