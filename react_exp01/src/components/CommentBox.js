@@ -3,6 +3,8 @@
  */
 
 import React, { Component } from 'react';
+import './CommentBox.css';
+
 
 class CommentBox extends Component {
     render() {
