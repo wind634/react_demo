@@ -9,7 +9,8 @@ import { Button } from 'element-react';
 
 import 'element-theme-default';
 import { connect } from 'react-redux';
-import {buttonClickAction,changeTextAction}  from './constant';
+import {onButtonClick, onChangeText}  from './actions/testAction';
+import { bindActionCreators } from 'redux';
 
 
 class App extends Component {
@@ -73,10 +74,10 @@ function mapStateToProps(state) {
 
 //映射Redux actions到组件的属性
 function mapDispatchToProps(dispatch){
-    return{
-        onButtonClick:()=>dispatch(buttonClickAction),
-        onChangeText:()=>dispatch(changeTextAction)
-    }
+    return bindActionCreators({
+        onButtonClick:onButtonClick,
+        onChangeText:onChangeText,
+    }, dispatch);
 }
 
 //export default App;

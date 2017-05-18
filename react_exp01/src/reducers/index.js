@@ -9,6 +9,7 @@ const initialState = {
 }
 
 const testReducer = (state = initialState, action) => {
+    console.log(action);
     switch (action.type) {
         case 'CHANGE_TEXT':
             return {
