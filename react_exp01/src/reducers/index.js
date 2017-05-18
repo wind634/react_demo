@@ -4,7 +4,6 @@
 import { combineReducers } from 'redux';
 import { nav } from './nav';
 
-
 //reducer
 const initialState = {
     text: 'Hello'
