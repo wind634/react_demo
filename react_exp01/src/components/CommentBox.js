@@ -32,15 +32,34 @@ class CommentBox extends Component {
             },
 
         ]});
+
+        //var _that = this;
+        //setTimeout(function(){
+        //    _that.setState({data: [
+        //        {
+        //            "author": "吕布",
+        //            "id": 1,
+        //            "text": "方天画戟",
+        //        }]}
+        //    );
+        //},2000);
     }
     render() {
         return (
             <div className="commentBox">
                 <h1>Comments</h1>
                 <CommentList data={this.state.data} />
-                <CommentForm />
+                <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)}/>
             </div>
         );
+    }
+    handleCommentSubmit(comment) {
+        // TODO: submit to the server and refresh the list
+        var comments = this.state.data;
+        comment.id = Date.now();
+        var newComments = comments.concat([comment]);
+
+        this.setState({data:newComments});
     }
 }
 
