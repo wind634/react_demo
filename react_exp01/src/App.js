@@ -3,7 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import CommentBox from './components/CommentBox'
 
-import {Navbar, Button} from "react-bootstrap"
+//import {Navbar, ButtonToolbar, Button} from "react-bootstrap"
+
+import { Button } from 'element-react';
+
+import 'element-theme-default';
 
 class App extends Component {
   render() {
@@ -25,17 +29,25 @@ class App extends Component {
       //    </div>
       //);
 
-      return (
-          <Navbar>
-              <Navbar.Header>
-                  <Navbar.Brand>
-                      <a href="#">react-bootstrap</a>
-                  </Navbar.Brand>
-              </Navbar.Header>
-              <Button >按钮</Button>
-          </Navbar>
-      );
+      //return (
+      //    <Navbar>
+      //        <Navbar.Header>
+      //            <Navbar.Brand>
+      //                <a href="#">react-bootstrap</a>
+      //            </Navbar.Brand>
+      //        </Navbar.Header>
+      //
+      //        <ButtonToolbar>
+      //            <Button bsStyle="primary" bsSize="large">Large button</Button>
+      //            <Button bsSize="large">Large button</Button>
+      //        </ButtonToolbar>
+      //
+      //    </Navbar>
+      //);
 
+      return (
+          <Button type="primary">Hello</Button>
+      );
   }
 }
 
