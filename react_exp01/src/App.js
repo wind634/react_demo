@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CommentBox from './components/CommentBox'
+import CounterContainer  from './containers/CounterContainer'
 
 //import {Navbar, ButtonToolbar, Button} from "react-bootstrap"
 
@@ -45,10 +46,37 @@ class App extends Component {
       //    </Navbar>
       //);
 
+      //return (
+      //    <Button type="primary">Hello</Button>
+      //);
+
+      //return (
+      //    <CounterContainer />
+      //);
+
+      const {text, onChangeText, onButtonClick} = this.props;
       return (
-          <Button type="primary">Hello</Button>
+          <div>
+              <h1 onClick={onChangeText}> {text} </h1>
+              <button onClick={onButtonClick}>click me</button>
+          </div>
       );
   }
 }
 
-export default App;
+//映射Redux state到组件的属性
+function mapStateToProps(state) {
+    return { text: state.text }
+}
+
+//映射Redux actions到组件的属性
+function mapDispatchToProps(dispatch){
+    return{
+        onButtonClick:()=>dispatch(buttonClickAction),
+        onChangeText:()=>dispatch(changeTextAction)
+    }
+}
+
+//export default App;
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
