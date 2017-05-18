@@ -7,7 +7,10 @@ import About from './components/About'
 import Repos from './components/Repos'
 //import BasicExample from './router'
 import { Provider } from 'react-redux';
-import {rootReducer} from './reducers'
+//import {rootReducer} from './reducers'
+import testReducer from './reducers'
+
+import { createStore } from 'redux';
 
 //ReactDOM.render(
 //    <BasicExample />,
@@ -16,7 +19,7 @@ import {rootReducer} from './reducers'
 
 //store
 
-let store = createStore(rootReducer);
+let store = createStore(testReducer);
 
 ReactDOM.render(
     <Provider store={store}>

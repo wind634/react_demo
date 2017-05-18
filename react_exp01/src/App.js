@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CommentBox from './components/CommentBox'
-import CounterContainer  from './containers/CounterContainer'
 
 //import {Navbar, ButtonToolbar, Button} from "react-bootstrap"
 
 import { Button } from 'element-react';
 
 import 'element-theme-default';
+import { connect } from 'react-redux';
+import {buttonClickAction,changeTextAction}  from './constant';
+
 
 class App extends Component {
   render() {
